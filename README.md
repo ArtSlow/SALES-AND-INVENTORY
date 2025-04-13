@@ -35,13 +35,8 @@ Frontend: HTML, CSS, Bootstrap 5
 
 Backend: Python, Flask
 
-Storage: In-memory (can be upgraded to SQLite or other databases)
-
 📂 Project Structure:
-csharp
-Copy
-Edit
-inventory_app/
+Salas and Inventory_app/
 ├── app.py                  # Main Flask app
 ├── templates/              # HTML templates (Jinja2)
 │   ├── base.html           # Shared layout
@@ -55,14 +50,10 @@ inventory_app/
 Install Flask:
 
 bash
-Copy
-Edit
 pip install flask
 Run the app:
 
 bash
-Copy
-Edit
 python app.py
 Open in browser: Navigate to: http://127.0.0.1:5000
 Login with: admin / admin123
@@ -70,11 +61,6 @@ Login with: admin / admin123
 💡 Future Improvements:
 Integrate SQLite or MySQL for persistent data storage
 
-Add user roles and permissions (e.g. staff vs admin)
 
-Export sales reports as PDF/Excel
-
-Add edit/delete options for inventory items
-
-Deploy online with Heroku, Render, or PythonAnywhere
+Add edit/delete items.
 
