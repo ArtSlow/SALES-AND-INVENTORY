@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Make a Sale</h3>
+<form method="POST" action="{{ url_for('make_sale') }}" class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label>Select Item:</label>
+        <select name="name" class="form-select">
+            {% for name in inventory %}
+                <option value="{{ name }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <input type="number" name="quantity" class="form-control" placeholder="Quantity" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Sell</button>
+</form>
+<a href="{{ url_for('dashboard') }}" class="btn btn-link mt-3">Back</a>
+{% endblock %}

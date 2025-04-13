@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Sales History</h3>
+<table class="table table-bordered table-hover">
+    <thead class="table-light">
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for sale in sales %}
+        <tr>
+            <td>{{ sale.item }}</td>
+            <td>{{ sale.quantity }}</td>
+            <td>${{ sale.total }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back</a>
+{% endblock %}
